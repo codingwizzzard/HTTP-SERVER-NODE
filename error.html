@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+        :root {
+            --bg: #313942;
+            --ghost: #528cce;
+            --heading: #e7ebf2;
+        }
+
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: var(--heading);
+            font-size: 12.5rem;
+            letter-spacing: 0.10em;
+            margin: 0.025em 0;
+            text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
+            white-space: nowrap;
+
+            @media (max-width: 30rem) {
+                font-size: 8.5rem;
+            }
+
+            span {
+                animation: spooky 2s alternate infinite linear;
+                color: var(--ghost);
+                display: inline-block;
+            }
+        }
+
+        h2 {
+            color: var(--heading);
+            margin-bottom: 0.40em;
+        }
+
+        p {
+            color: #ccc;
+            margin: 0;
+        }
+
+        a {
+            color: var(--ghost);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5em;
+            border: 1px solid var(--ghost);
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 15px;
+        }
+
+        a:hover {
+            background-color: var(--ghost);
+            color: var(--heading);
+        }
+
+        @keyframes spooky {
+            from {
+                transform: translateY(0.15em) scaleY(0.95);
+            }
+
+            to {
+                transform: translateY(-0.15em);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>4<span><i class="fas fa-ghost"></i></span>4</h1>
+        <h2>Error: 404 page not found</h2>
+        <p>Sorry, the page you're looking for is not available.</p>
+        <a href="/">Go back to home page</a> 
+    </main>
+</body>
+
+</html>
